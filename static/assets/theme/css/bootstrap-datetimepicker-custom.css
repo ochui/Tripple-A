@@ -1,0 +1,174 @@
+
+.datepicker-months table tbody tr td, .datepicker-years table tbody tr td,.datepicker-decades table tbody tr td {
+    padding: 14px 0;
+}
+
+.datepicker-months table tbody tr td span, .datepicker-years table tbody tr td span,.datepicker-decades table tbody tr td span {
+    display: inline-block;
+    width: 53.3px;
+    height: 52px;
+    margin: 0px;
+    padding: 0;
+    border-radius: 0;
+    border: 1px dashed #eae9e9;
+    float: left;
+    margin-bottom: -1px;
+    margin-right: -1px;
+}
+
+.datepicker-decades table tbody tr td span {
+    width: 105.6px;
+    height: 40px;
+    padding: 8px 0;
+}
+
+.bootstrap-datetimepicker-widget table td span.active {
+    background: #fdd835;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 9999;
+    border-color: transparent;
+}
+
+.datepicker-days table thead tr:first-child th {
+    padding: 14px;
+    transition: all ease-in-out 0.30s;
+    -webkit-transition: all ease-in-out 0.30s;
+}
+
+.datepicker-days table thead tr:first-child th:hover {
+    background: #fff;
+    color: #333;
+}
+
+.bootstrap-datetimepicker-widget {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+.bootstrap-datetimepicker-widget .datepicker {
+    background: #fff;
+    padding: 0;
+}
+
+.bootstrap-datetimepicker-widget .timepicker {
+    /* background: #ddd; */
+    /* height: 100%; */
+    /* display: none; */
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu{position:absolute;z-index:999999;display: block;}
+
+.bootstrap-datetimepicker-widget table td.active.today:before {
+    border-bottom-color: #333;
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: #fdd835;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background: #fdd835;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 9999;
+    border-color: transparent;
+    transform: scale(1.1);
+}
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th {
+    padding: 11px;
+    font-family: roboto;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    border-radius: 0;
+    border: 1px dashed #e2e1e1;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+    font-weight: bold;
+}
+
+.bootstrap-datetimepicker-widget table td.day.old,.bootstrap-datetimepicker-widget table td.day.new {
+    background: #f5f4f4;
+    color: #bdbdbd;
+    font-weight: 300;
+}
+
+.table-condensed>thead>tr>th {
+    background: #eee;
+}
+
+th.prev,th.next {
+    background: #fdd835!important;
+    border-radius: 0!important;
+    padding: 14px!important;
+    transition: all ease-in-out 0.30s;
+    -webkit-transition: all ease-in-out 0.30s;
+    border: none!important;
+}
+
+th.prev:hover, th.next:hover {
+    background: #fff!important;
+    color: #333;
+}
+
+th.picker-switch {
+    background: #333!important;
+    border-radius: 0!important;
+    color: #fff;
+    padding: 14px;
+    transition: all ease-in-out 0.30s;
+    -webkit-transition: all ease-in-out 0.30s;
+    border: none!important;
+}
+
+th.picker-switch:hover {
+    background: #fff!important;
+    color: #333;
+}
+.toolbar{background:#333;}
+.toolbar tbody  tr td{padding:5px!important;}
+.toolbar *{background:transparent!important;color:#fdd835;border:none!important;}
+.timepicker {}
+.timepicker-picker *{}
+.timepicker-picker {
+    background: transparent;
+}
+
+.timepicker-picker table td {
+    padding: 0!important;
+    margin: 0!important;
+    border: none!important;
+}
+
+.timepicker-picker table td a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0!important;
+    margin: 0px!important;
+    border-radius: 0!important;
+}
+
+.timepicker-picker table td a span {
+    background: #fff!important;
+    color: #333;
+    box-shadow: none;
+}
+
+.timepicker-picker table td span {
+    width: 100%!important;
+    height: 100%;
+    display: inline-block;
+    margin: 0px!important;
+    padding: 0;
+    border-radius: 0!important;
+    box-shadow: 0 1px 12px 7px rgba(0,0,0,0.3);
+    background: #333!important;
+    color: #fff;
+}

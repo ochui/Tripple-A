@@ -1,0 +1,1126 @@
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 1600px) {
+    a.callus {
+        margin: 0!important;
+        float: none!important;
+        width: 100%;
+        border-radius: 0!important;
+        padding: 20px 15px!important;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    body {}
+    header .navbar-collapse.collapse {
+        position: fixed;
+        right: -300px;
+        width: 280px;
+        height: 100%!important;
+        background: #333;
+        top: 0;
+        padding-top: 70px!important;
+        z-index: 99999;
+        transition: all ease-in-out 0.30s;
+        -webkit-transition: all ease-in-out 0.30s;
+        box-shadow: -20px 0px 23px rgba(0, 0, 0, 0.2);
+    }
+    .navbar-header {
+        left: 35px;
+    }
+    .absulate-pos {
+        right: 35px!important;
+    }
+    header .navbar-nav {}
+    header .navbar-nav li {
+        width: 100%;
+    }
+    header .navbar-nav li a {
+        padding: 25px 35px;
+        text-align: right;
+    }
+
+header.header_v2 .collapse.navbar-collapse .navbar-nav>li >a {
+    padding: 14px 15px;
+    margin: 0;
+    border-radius: 0;
+}
+}
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+	*{}
+
+#main-slider_v2 .item .slide-title {
+    font-size: 110px;
+}
+
+#main-slider_v2 .item .min-text {
+    font-size: 35px;
+}
+
+#main-slider_v2 .item .thin-line {
+}
+
+#main-slider_v2 .item .buttons {
+    padding: 0;
+}
+
+header.header_v2 .collapse.navbar-collapse.active .navbar-nav>li >a {
+    margin: 0;
+    border-radius: 0;
+}
+
+.lines-button.close {
+    top: -23px;
+    position: absolute;
+    right: -20px;
+}
+
+.header_v2 .lines-button.close {
+    top: -50px;
+    right: -60px;
+}
+
+.header_v2.sticky-header .lines-button.close {
+    top: 0;
+    right: 0;
+}
+
+.lines-button.close+.social-link {
+    display: none;
+}
+    #main-slider .item .absulate-content {
+        top: 23%!important;
+    }
+	header.header_v2 .navbar-brand{
+    margin-left: -10px!important;
+}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    * {}
+
+#main-slider_v2 .item .slide-title {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+#main-slider_v2 .item .min-text {
+    font-size: 25px;
+}
+
+#main-slider_v2 .item .thin-line, #main-slider_v2 .item .thin-line b {
+    font-size: 20px;
+}
+
+#main-slider_v2 .item .buttons {
+    padding: 0;
+}
+
+#main-slider_v2 .item .buttons .btn {
+    padding: 10px 25px!important;
+    font-size: 16px;
+}
+    .app-phone {
+        position: absolute;
+        top: 185px;
+        right: 31px;
+    }
+    .ourvehicle .tab-content {
+        margin-top: 50px;
+    }
+    .ourvehicle .owl-theme .owl-nav {
+        top: 190px;
+        right: 0;
+        width: 100%;
+        height: 0;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-prev {
+        left: -5px;
+        right: auto;
+        position: absolute;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-next {
+        right: -5px;
+        left: auto;
+        position: absolute;
+    }
+    .vehicle-info.active h4 {
+        margin-top: 166px;
+    }
+    .vehicle-info .md-divider {
+        margin-left: -20px;
+    }
+    .vehicle-info.active .vh-thumb {
+        height: 272px;
+    }
+    .vehicle-info {
+        padding: 20px;
+    }
+    .padding70 {
+        padding: 31px;
+    }
+    .package-info.padding70 {
+        padding: 70px;
+    }
+    .padding-180 {
+        padding: 90px 0;
+    }
+    .download-app {
+        position: relative;
+    }
+    .slider {
+        padding-bottom: 49px;
+    }
+    .slider .owl-theme .counter.owl-dots {
+        bottom: -50px;
+    }
+    #main-slider .item .slide-title {
+        font-size: 90px;
+        margin-top: 20px;
+    }
+    #main-slider .item .min-text {
+        font-size: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    #main-slider .item .led-text {
+        width: 100%;
+        margin: 0;
+    }
+    #main-slider .item .cricle-go {
+        width: 170px;
+        height: 170px;
+        padding: 28px 0;
+        top: -30px;
+        text-align: center;
+    }
+    .absulate-pos {
+        top: 20px!important;
+    }
+    a.navbar-brand {
+        padding: 15px 0;
+    }
+
+header.header_v2 .navbar-brand {
+    margin-left: -15px!important;
+}
+    header.fixed-header {
+        height: 73px;
+        /* background: transparent; */
+    }
+    #main-slider .item .absulate-content {
+        top: 23%!important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    * {}
+
+.Route-intro #dvDistance label {
+    margin-right: 15px;
+}
+
+.Route-intro #dvDistance {
+    width: 68%;
+}
+
+div#dvPanel {
+    width: 100%;
+    height: 66%!important;
+    padding: 0;
+    margin-top: 2%;
+}
+
+div#dvMap {
+    width: 100%;
+    height: 30%!important;
+}
+
+#main-slider_v2 .item .absulate-content {
+    bottom: 5%;
+}
+
+#main-slider_v2 .item .min-text {
+    font-size: 25px;
+}
+
+#main-slider_v2 .item .buttons {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#main-slider_v2 .item .buttons .btn {
+    font-size: 16px;
+    padding: 10px 25px!important;
+}
+
+#main-slider_v2 .item .thin-line {
+    display: none;
+}
+
+#main-slider_v2 .item .slide-title {
+    font-size: 80px;
+    margin-bottom: 0;
+}
+    .pagetitle {
+        padding-top: 110px;
+        padding-bottom: 50px;
+    }
+    .sidebar {
+        margin: 15px;
+    }
+    .driver-full-portfolio .col-md-6.pull-right {
+        float: none!important;
+    }
+    .supportinfo {
+        margin: 50px 0;
+    }
+    .feature-box {
+        margin-bottom: 60px;
+    }
+    footer .container>.row>.col-md-3,
+    footer .container>.row>.col-md-5 {
+        margin-bottom: 45px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .gmap {
+        position: relative!important;
+        width: 100%;
+        margin: 0;
+        height: 450px!important;
+    }
+    .map-container {
+        position: relative;
+        padding: 0 15px!important;
+    }
+    .passanger-feed .row>.col-md-6 {
+        padding-top: 25px;
+        border-top: 1px dashed #ccc;
+        margin-top: 14px;
+    }
+    .passanger-feed .user-thumb {
+        float: left;
+        margin-left: -15px;
+        width: 160px;
+        height: 160px;
+    }
+    .owl-theme .counter.owl-dots.small-counter .owl-dot span {
+        background: #000;
+        height: 2px!important;
+        top: 22px;
+    }
+    .slider .owl-carousel .owl-stage-outer {
+        overflow: visible;
+    }
+    .slider .buttons {
+        position: relative;
+        bottom: -38px;
+        left: 0;
+    }
+    .owl-theme .owl-nav {
+        right: 25px;
+    }
+    .slider .owl-theme .owl-nav {
+        bottom: -50px;
+    }
+    #main-slider .item .thin-line {
+        display: none;
+    }
+    .app-phone {
+        position: relative;
+    }
+    .ourvehicle .tab-content {
+        margin-top: 50px;
+    }
+    .ourvehicle .owl-theme .owl-nav {
+        top: 250px;
+        right: 0;
+        width: 100%;
+        height: 0;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-prev {
+        left: -5px;
+        right: auto;
+        position: absolute;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-next {
+        right: -5px;
+        left: auto;
+        position: absolute;
+    }
+    .vehicle-info.active h4 {
+        margin-top: 188px;
+    }
+    .vehicle-info .md-divider {
+        margin-left: -20px;
+    }
+    .vehicle-info.active .vh-thumb {
+        height: 295px;
+    }
+    .vehicle-info {
+        padding: 20px;
+    }
+    .padding70 {
+        padding: 31px;
+    }
+    .message-form {
+        display: table;
+        width: 96%!important;
+    }
+    .package-info.padding70 {
+        padding: 70px;
+    }
+    .padding-180 {
+        padding: 70px 0;
+    }
+    .download-app {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .slider {
+        padding-bottom: 80px;
+        padding-top: 39px;
+        overflow: hidden;
+    }
+    .slider .owl-theme .counter.owl-dots {
+        bottom: -50px;
+    }
+    #main-slider .item .slide-title {
+        font-size: 60px;
+        margin-top: 0;
+    }
+    #main-slider .item .min-text {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    #main-slider .item .min-text:after {
+        opacity: 0;
+    }
+    #main-slider .item .led-text {
+        width: 100%;
+        margin: 0;
+        padding-right: 55%;
+    }
+    #main-slider .item .cricle-go {
+        width: 130px;
+        height: 130px;
+        padding: 4px 0;
+        top: 0;
+        text-align: center;
+    }
+    .absulate-pos {
+        top: 20px!important;
+    }
+    a.navbar-brand {
+        padding: 15px 0;
+    }
+
+header.header_v2 .navbar-brand {
+    margin-left: -10px!important;
+}
+    header.fixed-header {
+        height: 73px;
+        /* background: transparent; */
+    }
+    #main-slider .item .absulate-content {
+        top: 23%!important;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .driver-full-portfolio .col-md-6.pull-right {
+        float: none!important;
+    }
+    * {}
+
+.style_warrper {
+    top: 41%;
+}
+
+.adp .adp-warnbox+div+div {
+    height: 99%!important;
+}
+
+#dvPanel>div {
+    height: 100%!important;
+}
+
+div#dvPanel {
+    height: 65%!important;
+    padding: 0;
+    margin-top: 20px;
+}
+
+div#dvMap {
+    height: 30%!important;
+}
+
+.Route-intro #dvDistance {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#main-slider_v2 .item .absulate-content {
+    bottom: 15%;
+}
+
+#main-slider_v2 .item .min-text {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#main-slider_v2 .item .buttons {
+    margin: 0;
+    padding: 0;
+}
+
+#main-slider_v2 .item .buttons .btn {
+    padding: 8px 21px!important;
+    font-size: 14px;
+    border-width: 3px;
+    min-height: auto;
+    height: auto;
+    margin-right: 0;
+}
+
+#main-slider_v2 .item .thin-line {
+    display: none;
+}
+
+#main-slider_v2 .item .slide-title {
+    font-size: 60px;
+    margin: 0;
+}
+
+#main-slider_v2 .item .slide-title span {
+    left: -7px!important;
+}
+    .post-content {
+        margin-top: 30px;
+    }
+    .primary-title {
+        padding-left: 20px;
+    }
+    .buttons .btn {
+        margin-bottom: 15px;
+        margin-right: 0;
+        padding: 9px 22px;
+    }
+    .driver-info {
+        background: #eee;
+        margin: 0px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-top: none;
+    }
+    .dri-thumb {
+        display: inline-block;
+    }
+    .vh-thumb {
+        height: auto;
+        display: inline-block;
+        width: 100%;
+        border: 1px solid #ddd;
+        margin: 0;
+    }
+    .vehicle-info h4 {
+        margin-top: -5px;
+        border: 1px solid #ddd;
+        padding: 32px 20px;
+        border-top: none;
+        margin-bottom: 0;
+    }
+    .ourvehicle .nav-tabs {
+        float: left!important;
+    }
+    .ourvehicle .nav-tabs li:first-child a {
+        padding-left: 0;
+        width: 80px;
+        text-align: center;
+    }
+    .pkg-item {
+        margin-bottom: 30px;
+    }
+    footer .container>.row>.col-md-3,
+    footer .container>.row>.col-md-5 {
+        margin-bottom: 45px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .gmap {
+        position: relative!important;
+        width: 100%;
+        margin: 0;
+        height: 450px!important;
+    }
+    .map-container {
+        position: relative;
+        padding: 0 15px!important;
+    }
+    .passanger-feed .row>.col-md-6 {
+        padding-top: 25px;
+        border-top: 1px dashed #ccc;
+        margin-top: 14px;
+    }
+    .passanger-feed .user-thumb {
+        float: left;
+        margin-left: -15px;
+        width: 160px;
+        height: 160px;
+    }
+    .owl-theme .counter.owl-dots.small-counter .owl-dot span {
+        background: #000;
+        height: 2px!important;
+        top: 22px;
+    }
+    .slider .owl-carousel .owl-stage-outer {
+        overflow: visible;
+    }
+    .slider .buttons {
+        position: relative;
+        bottom: 11px;
+        left: 0;
+    }
+    .owl-theme .owl-nav {
+        right: 25px;
+    }
+    .slider .owl-theme .owl-nav {
+        bottom: -50px;
+    }
+    #main-slider .item .thin-line {
+        display: none;
+    }
+    .app-phone {
+        position: relative;
+    }
+    .ourvehicle .tab-content {
+        margin-top: 50px;
+    }
+    .ourvehicle .owl-theme .owl-nav {
+        top: 250px;
+        right: 0;
+        width: 100%;
+        height: 0;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-prev {
+        left: -5px;
+        right: auto;
+        position: absolute;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-next {
+        right: -5px;
+        left: auto;
+        position: absolute;
+    }
+    .vehicle-info.active h4 {
+        margin-top: 39px;
+    }
+    .vehicle-info .md-divider {
+        margin-left: 0;
+        background: #ddd;
+        display: none;
+    }
+    .vehicle-info.active .vh-thumb {
+        height: auto!important;
+        position: relative!important;
+        margin: 0;
+        overflow: visible;
+        display: inline-block;
+        width: 100%;
+    }
+    .vehicle-info.active .vh-thumb:before {
+        opacity: 0;
+    }
+    .vehicle-info.active .vh-thumb img.flip {
+        display: none;
+    }
+    .vehicle-info {
+        padding: 20px;
+    }
+    .vehicle-info .booknow {
+        position: relative;
+        display: block!important;
+        float: left;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .vehicle-info .booknow i {
+        border-radius: 0;
+        padding: 18px 15px;
+        width: 70px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+    .padding70 {
+        padding: 31px;
+    }
+    .message-form {
+        display: table;
+        width: 96%!important;
+    }
+    .package-info.padding70 {
+        padding: 70px;
+    }
+    .padding-180 {
+        padding: 80px 0;
+    }
+    .bookcab form .row>.col-sm-12,
+    .bookcab form .row>.col-sm-6,
+    .bookcab form .row>.col-sm-12 .col-sm-4 {
+        display: inline-block!important;
+        width: 100%!important;
+    }
+    .download-app {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .slider {
+        padding-bottom: 80px;
+        padding-top: 39px;
+    }
+    .slider .owl-theme .counter.owl-dots {
+        bottom: -50px;
+    }
+    #main-slider .item .slide-title {
+        font-size: 30px;
+        margin-top: 0;
+        line-height: 71px;
+        letter-spacing: 3px;
+    }
+    #main-slider .item .min-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    #main-slider .item .min-text:after {
+        opacity: 0;
+    }
+    #main-slider .item .led-text {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: none!important;
+    }
+    #main-slider .item .cricle-go {
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        top: 0;
+        text-align: center;
+        margin-left: 5px;
+    }
+    .absulate-pos {
+        top: 20px!important;
+    }
+    a.navbar-brand {
+        padding: 15px 0;
+    }
+
+header.header_v2 .navbar-brand {
+    margin-left: -14px!important;
+}
+    header.fixed-header {
+        height: 73px;
+        /* background: transparent; */
+    }
+
+header.header_v2.sticky-header {position: fixed;}
+
+header.header_v2 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+}
+    #main-slider .item .absulate-content {
+        top: 42%!important;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    * {}
+
+.adp-summary+div {
+    height: 90%!important;
+}
+
+div#dvPanel {
+    height: 74%!important;
+    padding: 0;
+    margin-top: 2em;
+}
+
+div#dvMap {
+    height: 20%!important;
+}
+
+.Route-intro #dvDistance {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.booking-form .buttons .btn {
+    margin: 0;
+    padding: 10px 19px;
+}
+
+.booking-form .buttons {
+    padding-top: 0!important;
+}
+
+
+
+#main-slider_v2 .item .absulate-content {
+    bottom: 6%;
+}
+
+#main-slider_v2 .item .buttons {
+    margin: 0;
+    padding: 6px 0;
+}
+
+#main-slider_v2 .item .buttons .btn {
+    margin: 0;
+    padding: 7px 18px!important;
+    border-width: 2px;
+    font-size: 14px;
+    height: auto;
+    min-height: auto;
+}
+
+#main-slider_v2 .item .min-text {
+    font-size: 24px;
+}
+
+#main-slider_v2 .item .thin-line,#main-slider_v2 .item .thin-line b {
+    font-size: 14px;
+}
+
+#main-slider_v2 .item .slide-title {
+    font-size: 50px;
+    margin: 0;
+}
+
+#main-slider_v2 .item .slide-title
+ span {
+    margin: 0;
+    left: -8px!important;
+    margin-bottom: 5px!important;
+}
+    ul.dr-career-info {
+        padding: 10px 30px!important;
+    }
+    .driver-full-portfolio .col-md-6.pull-right {
+        float: none!important;
+    }
+    .supportinfo {
+        margin: 30px 0;
+    }
+    .no-padding {}
+    .owl-theme .counter.owl-dots.small-counter {
+        bottom: 0;
+    }
+    .download-info h2 {
+        margin-top: 50px;
+    }
+    .big-text b {
+        display: block;
+    }
+    .big-text {
+        font-size: 30px;
+    }
+    .title-big,
+    .title-big small {
+        font-size: 50px;
+    }
+    .input-group {
+        margin-bottom: 15px;
+    }
+    header .social-link {
+        display: none;
+    }
+    .post-content {
+        margin-top: 30px;
+    }
+    .primary-title {
+        padding-left: 20px;
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .primary-title small {
+        font-size: 35px;
+    }
+    .primary-title:before {
+        top: 10px;
+    }
+    .buttons .btn {
+        margin-bottom: 15px;
+    }
+    .driver-info {
+        background: #eee;
+        margin: 0px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-top: none;
+    }
+    .dri-thumb {
+        display: inline-block;
+    }
+    .vh-thumb {
+        height: auto;
+        display: inline-block;
+        width: 100%;
+        border: 1px solid #ddd;
+        margin: 0;
+    }
+    .vehicle-info h4 {
+        margin-top: -5px;
+        border: 1px solid #ddd;
+        padding: 32px 20px;
+        border-top: none;
+        margin-bottom: 0;
+    }
+    .ourvehicle .nav-tabs {
+        float: left!important;
+        width: 100%;
+        overflow: hidden;
+    }
+    .ourvehicle .nav-tabs li {
+        display: inline-block;
+        width: 100%;
+    }
+    .ourvehicle .nav-tabs li a {
+        width: 100%;
+        padding: 18px 0px!important;
+        text-align: left!important;
+    }
+    .ourvehicle .nav-tabs li:first-child a {}
+    .pkg-item {
+        margin-bottom: 30px;
+    }
+    footer .container>.row>.col-md-3,
+    footer .container>.row>.col-md-5 {
+        margin-bottom: 45px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .gmap {
+        position: relative!important;
+        width: 100%;
+        margin: 0;
+        height: 450px!important;
+    }
+    .map-container {
+        position: relative;
+        padding: 0 15px!important;
+    }
+    .passanger-feed .row>.col-md-6 {
+        padding-top: 25px;
+        border-top: 1px dashed #ccc;
+        margin-top: 14px;
+    }
+    .passanger-feed .user-thumb {
+        float: left;
+        margin-left: -15px;
+        width: 160px;
+        height: 160px;
+    }
+    .owl-theme .counter.owl-dots.small-counter .owl-dot span {
+        background: #000;
+        height: 2px!important;
+        top: 22px;
+    }
+    .slider .owl-carousel .owl-stage-outer {
+        overflow: visible;
+    }
+    .slider .buttons {
+        position: relative;
+        bottom: 11px;
+        left: 0;
+    }
+    .slider .buttons .btn {
+        font-size: 14px;
+        padding: 16px 19px!important;
+        width: auto;
+        min-height: auto;
+    }
+    .owl-theme .owl-nav {
+        right: 25px;
+    }
+    .slider .owl-theme .owl-nav {
+        bottom: -50px;
+    }
+    #main-slider .item .thin-line {
+        display: none;
+    }
+    .app-phone {
+        position: relative;
+    }
+    .ourvehicle .tab-content {
+        margin-top: 0;
+    }
+    .ourvehicle .owl-theme .owl-nav {
+        top: 250px;
+        right: 0;
+        width: 100%;
+        height: 0;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-prev {
+        left: -5px;
+        right: auto;
+        position: absolute;
+    }
+    .ourvehicle .owl-theme .owl-nav .owl-next {
+        right: -5px;
+        left: auto;
+        position: absolute;
+    }
+    .vehicle-info.active h4 {
+        margin-top: 39px;
+    }
+    .vehicle-info .md-divider {
+        margin-left: 0;
+        background: #ddd;
+        display: none;
+    }
+    .vehicle-info.active .vh-thumb {
+        height: auto!important;
+        position: relative!important;
+        margin: 0;
+        overflow: visible;
+        display: inline-block;
+        width: 100%;
+    }
+    .vehicle-info.active .vh-thumb:before {
+        opacity: 0;
+    }
+    .vehicle-info.active .vh-thumb img.flip {
+        display: none;
+    }
+    .vehicle-info {
+        padding: 15px;
+        border: none;
+    }
+    .vehicle-info .booknow {
+        position: relative;
+        display: block!important;
+        float: left;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .vehicle-info .booknow i {
+        border-radius: 0;
+        padding: 18px 15px;
+        width: 70px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+    .padding70 {
+        padding: 15px;
+    }
+    .message-form {
+        display: table;
+        width: 96%!important;
+    }
+    .package-info.padding70 {
+        padding: 20px;
+    }
+    .package-info .title-small {
+        margin-top: 50px;
+    }
+    .padding-180 {
+        padding: 80px 0;
+    }
+    .bookcab form .row>.col-sm-12,
+    .bookcab form .row>.col-sm-6,
+    .bookcab form .row>.col-sm-12 .col-sm-4 {
+        display: inline-block!important;
+        width: 100%!important;
+    }
+    .download-app {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .slider {
+        padding-bottom: 83px;
+        padding-top: 69px;
+    }
+    .slider .owl-theme .counter.owl-dots {
+        bottom: -50px;
+    }
+    #main-slider .item .slide-title {
+        font-size: 22px;
+        margin-top: 0;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+    #main-slider .item .min-text {
+        font-size: 14px;
+        margin-bottom: 11px;
+        padding-bottom: 10px;
+        margin-top: 14px;
+    }
+    #main-slider .item .min-text:after {
+        opacity: 0;
+    }
+    #main-slider .item .led-text {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: none!important;
+    }
+    #main-slider .item .cricle-go {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        top: 0px;
+        text-align: center;
+        margin-left: 5px;
+        text-align: center;
+        padding: 0;
+    }
+    .absulate-pos {
+        top: 20px!important;
+    }
+    a.navbar-brand {
+        padding: 15px 0;
+    }
+
+header.header_v2 .navbar-brand {
+    margin-left: -10px!important;
+}
+    header.fixed-header {
+        height: 73px;
+        /* background: transparent; */
+    }
+
+header.header_v2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+    #main-slider .item .absulate-content {
+        top: 35px;
+    }
+}

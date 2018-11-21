@@ -1,0 +1,252 @@
+/************  Override Bootstrap CSS ***************/
+
+nav {} nav.navbar {} .navbar-header {
+    position: absolute;
+    left: 65px;
+}
+.navbar-toggle {
+    display: block;
+    background: transparent!important;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+.navbar-toggle .icon-bar {
+    width: 30px;
+    height: 3px;
+    background: #fff!important;
+    margin-bottom: 7px;
+}
+.navbar-brand {
+    height: auto;
+    padding: 33px 15px;
+    margin: 0;
+}
+nav.navbar.navbar-default {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: auto;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+.navbar-nav>li>a {
+    font-family: lato;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 45px 22px;
+    letter-spacing: 2px;
+}
+.navbar-nav>li>a:hover {} .navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover {
+    background: #333;
+    color: #fff;
+}
+.container-fluid {
+    padding: 0 65px;
+}
+.input-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-group.input-shadow {
+    box-shadow: 0 11px 13px rgba(0,0,0,0.2);
+}
+.input-group-addon {
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    width: 70px;
+    font-size: 25px;
+    color: #808080;
+}
+.input-group-addon:after {
+    position: absolute;
+    right: 1px;
+    top: 22px;
+    height: 30%;
+    width: 1px;
+    background: #808080;
+    content: '';
+}
+.form-control {
+    border-radius: 0;
+    background: #fff;
+    height: 60px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    padding: 10px 22px;
+    outline: none!important;
+    border: none;
+    box-shadow: none!important;
+}
+blockquote {
+    margin: 0;
+    padding-right: 0;
+    font-size: 13px;
+    font-family: Raleway;
+    letter-spacing: 1px;
+    border-left: 3px solid #fede03;
+    color: #333;
+    font-weight: 800;
+    margin: 38px 0;
+}
+blockquote p {} blockquote i {
+    color: #333;
+}
+.nav-tabs {
+    border-bottom-color: transparent;
+}
+.nav-tabs li {} .nav-tabs li a {
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    border: none;
+    border-bottom: 1px solid transparent;
+    margin: 0 20px;
+    padding: 17px 15px;
+    padding-top: 0;
+}
+.nav-tabs li a:hover {
+    background: transparent;
+    color: #000!important;
+}
+.nav-tabs li.active a {
+    color: #fdb801!important;
+    border: none!important;
+    border-bottom: 1px solid!important;
+}
+.tab-content>.active {
+    display: block!important;
+}
+/************ Override Bootstrap CSS EMD ***************/
+/************ Override Owl carousel CSS ***************/
+.owl-theme .counter.owl-dots.white .owl-dot {
+    color: #fff;
+}
+
+.owl-theme .counter.owl-dots.white .owl-dot.active:before {
+    color: #fede03;
+}
+
+.owl-theme .counter.owl-dots.white .owl-dot.active span {
+    background: #fede03;
+}
+
+.owl-theme .counter.owl-dots.white .owl-dot span {background: #fff;}
+.owl-theme .counter.owl-dots.white {
+    color: #fff;
+}
+
+.owl-dots.counter.white.pos_bottom {
+    bottom: 9%;
+}
+.owl-theme .counter.owl-dots {
+    counter-reset: slides-num;
+    position: absolute;
+    right: 100px;
+    bottom: 32%;
+    min-height: 160px;
+}
+.owl-dots.counter:after {
+    position: absolute;
+    content: 'Navigation';
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    top: 55px;
+    left: 5px;
+}
+.owl-theme .counter.owl-dots .owl-dot span {
+    transition: all ease-in-out 0.09s;
+    -webkit-transition: all ease-in-out 0.09s;
+}
+.owl-theme .owl-dots.counter span {
+    height: 2px!important;
+    width: 43px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: #666;
+    top: 25px;
+}
+.owl-theme .counter.owl-dots .owl-dot {
+    counter-increment: slides-num;
+    position: relative;
+    display: block;
+    color: #666;
+    text-align: center;
+    height: 50px;
+}
+.owl-theme .counter.owl-dots .owl-dot:before {
+    content: "0" counter(slides-num);
+    font-size: 16px;
+    font-weight: bold;
+    height: 0;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+.owl-theme .counter.owl-dots .owl-dot.active:before {
+    font-size: 35px;
+    font-weight: 900;
+    color: #000;
+    position: relative;
+    right: 42px;
+    top: 1px;
+}
+.owl-theme .counter.owl-dots .owl-dot.active span {
+    width: 100px;
+    background: #000;
+    top: 25px;
+}
+.owl-theme .owl-nav {
+    margin: 0;
+    position: absolute;
+    bottom: 1%;
+    right: 65px;
+}
+.owl-nav.small-nav .owl-prev,
+.owl-nav.small-nav .owl-next {
+    background: transparent!important;
+    color: #fff;
+}
+.owl-nav.small-nav .owl-prev:hover,
+.owl-nav.small-nav .owl-next:hover {
+    background: transparent!important;
+    box-shadow: none!important;
+    color: #fede03!important;
+}
+.owl-theme .owl-nav .owl-prev,
+.owl-theme .owl-nav .owl-next {
+    margin: 10px;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 46px;
+    font-size: 20px;
+    border-radius: 0;
+    background: #333;
+    transition: all ease-in-out 0.30s;
+    -webkit-transition: all ease-in-out 0.30s;
+}
+.owl-theme .owl-nav .owl-prev:hover,
+.owl-theme .owl-nav .owl-next:hover {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+/************  Override Owl carousel CSS ***************/
