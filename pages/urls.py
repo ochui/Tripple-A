@@ -3,10 +3,9 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from pages import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include('pages.urls'))
+    path('', views.HomeView.as_view(), name='home'),
 ]
