@@ -3,10 +3,7 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 
-from django.contrib import admin
-from django.urls import path, include
+from django.views.generic.base import TemplateView
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include('pages.urls'))
-]
+class HomeView(TemplateView):
+    template_name = 'test.html'
