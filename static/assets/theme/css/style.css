@@ -7,8 +7,8 @@
 ====================== */
 
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css');
+@import url('bootstrap-select.min.css');
+@import url('bootstrap-datetimepicker.css');
 @import url('bootstrap-datetimepicker-custom.css');
 
 /* font-awesome-4.7.0 css files
