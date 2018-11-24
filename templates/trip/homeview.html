@@ -1,0 +1,854 @@
+{% extends 'trip/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- SLIDER -->
+    <section class="slider" id="slider">
+      <div class="owl-carousel owl-theme" id="main-slider">
+        <div class="item">
+          <!-- SLIDER ONE -->
+          <img src="{% static 'assets/theme/img/slider/slide_01.png' %}" alt="slide_01" />
+          <div class="container absulate-content">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="thin-line">reach your <b>destinations</b></span>
+                <h3 class="xlg slide-title"> Let’s
+                  <span class="cricle-go" data-animation="animated rubberBand" data-animation-delay="0.2s">go</span>
+                </h3>
+                <span data-animation="animated fadeInDown" data-animation-delay="0.4s" class="min-text">start at <b>$5</b> <sup>/K.m</sup></span>
+                <p data-animation="animated fadeInDown" data-animation-delay="0.4s" class="led-text text-left col-sm-9 padding-left-none">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                <div class="buttons" data-animation="animated fadeInDown" data-animation-delay="0.8s">
+                  <a href="#" class="btn btn-default btn-book">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER ONE END -->
+        <div class="item">
+          <!-- SLIDER TWO -->
+          <img src="{% static 'assets/theme/img/slider/slide_02.png' %}" alt="slide_01" />
+          <div class="container absulate-content">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="thin-line">In Our<b> Package</b></span>
+                <h3 class="xlg slide-title"> Enjo
+                  <span class="cricle-go" data-animation="animated rubberBand" data-animation-delay="0.2s">ye</span>
+                </h3>
+                <span data-animation="animated fadeInDown" data-animation-delay="0.4s" class="min-text">Only <b>$200</b> <sup>/24 hr</sup></span>
+                <p data-animation="animated fadeInDown" data-animation-delay="0.4s" class="led-text text-left col-sm-9 padding-left-none">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                <div class="buttons" data-animation="animated fadeInDown" data-animation-delay="0.8s">
+                  <a href="#" class="btn btn-default btn-book">View Packages</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER TWO END -->
+        <div class="item">
+          <!-- SLIDER THREE -->
+          <img src="{% static 'assets/theme/img/slider/slide_03.png' %}" alt="slide_01" />
+          <div class="container absulate-content">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="thin-line">Ready To comfirt <b>ride</b></span>
+                <h3 class="xlg slide-title"> Free
+                  <span class="cricle-go" data-animation="animated rubberBand" data-animation-delay="0.2s">$0</span>
+                </h3>
+                <span data-animation="animated fadeInDown" data-animation-delay="0.4s" class="min-text">First Ride <b>1</b> <sup>/K.m</sup></span>
+                <p data-animation="animated fadeInDown" data-animation-delay="0.4s" class="led-text text-left col-sm-9 padding-left-none">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                <div class="buttons" data-animation="animated fadeInDown" data-animation-delay="0.8s">
+                  <a href="#" class="btn btn-default btn-book">Book Your ride</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER THREE END -->
+      </div>
+    </section>
+    <!-- SLIDER End -->
+    <!-- BOOK CAB-->
+    <section class="bookcab padding-180" id="bookcab">
+      <div class="container container-shadow">
+        <div class="row">
+          <div class="col-md-5 padding70 wow fadeInRight introDiv" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <div class="short-intro">
+              <h4 class="primary-title">Book <small>a cab</small><i>Go Drive</i></h4>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a </p>
+              <blockquote class="blockquote">
+                <i class="mb-0">We are a company that offers unique and clear design and build services
+                </i>
+              </blockquote>
+              <ul class="list">
+                <li><i class="fa fa-hand-o-right"></i> Super & reliable services</li>
+                <li><i class="fa fa-hand-o-right"></i> 24 X 7 customer support provide</li>
+                <li><i class="fa fa-hand-o-right"></i> Large Range of Car Models </li>
+                <li><i class="fa fa-hand-o-right"></i> GPS Tracking and help</li>
+                <li><i class="fa fa-hand-o-right"></i> Powerful Security Offer </li>
+              </ul>
+              <div class="buttons">
+                <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.8s" data-wow-delay="1.8s">Contact us</a>
+                <a href="aboutus.html" class="btn btn-default wow bounceIn" data-wow-duration="0.8s" data-wow-delay="1.8s">About Us</a>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-md-7 padding70 booking-form wow fadeInLeft formDiv" data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <!-- CAB BOOK FORM -->
+            <form action="" name="form-book-vehicle" method="post" id="form-book-vehicle">
+              <div class="row">
+
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="0.6s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-cab"></i></div>
+                    <select class="selectpicker form-control" name="vehicle" id="vehicle" data-live-search="true">
+                      <option value="">Select Vehicle</option>
+                      <option value="Audi">Audi</option>
+                      <option value="Bentley">Bentley</option>
+                      <option value="BMW">BMW</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="0.6s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-users"></i></div>
+                    <select class="selectpicker form-control" name="passangers" id="passangers" data-live-search="false">
+                      <option value="">Passengerse</option>
+
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="0.7s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                    <input id="pkup_location" type="text" name="pkup_location" class="placepicker startDestination form-control" placeholder="Pick-up Location" />
+                  </div>
+                </div>
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                    <input type='text' class="form-control px-datepicker" placeholder="Date and Time" name="pkup_date" id='pkup_date' />
+                  </div>
+                </div>
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="0.9s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-map-pin"></i></div>
+                    <input type='text' name="droff_location" id="droff_location" class="placepicker form-control endDestination" placeholder="Drop-off Location" />
+                  </div>
+                </div>
+
+                <div class="col-sm-6 wow bounceIn drop_of_date" style="display:none" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                    <input type='text' class="form-control px-datepicker" placeholder="Return Date and Time" name="dorpof_date" id='dorpof_date' />
+                  </div>
+                </div>
+                <div class="col-sm-6 wow bounceIn " data-wow-duration="0.8s" data-wow-delay="1s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-map-signs"></i></div>
+                    <select class="selectpicker form-control directions_select" name="directions" id="directions" data-live-search="false">
+                      <option value="">Direction</option>
+                      <option value="di_oneway">Only One Way</option>
+                      <option value="di_return">Return</option>
+
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-6 wow bounceIn name_selectr " data-wow-duration="0.8s" data-wow-delay="1.2s">
+                  <div class="input-group ">
+                    <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                    <input type='email' name="email" id="email" class="form-control" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="mini-packages col-sm-12 ">
+                  <div class="col-sm-4 no-padding wow bounceIn " data-wow-duration="0.8s" data-wow-delay="1.3s">
+                    <div class="pkg-item">
+                      <h5 class="pkg-title">
+                        <i class="fa fa-cab"></i> Regular <small>Cab</small>
+                      </h5>
+                      <div class="checkbox checkbox-emboss">
+                        <input type="radio" name="package" value="Regularcab" id="package" />
+                      </div>
+                      <div class="pkg-price">
+                        <span class="actual">$50<i>for 10km</i></span>
+                        <label> 1 Passanger</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 no-padding wow bounceIn " data-wow-duration="0.8s" data-wow-delay="1.4s">
+                    <div class="pkg-item">
+                      <h5 class="pkg-title">
+                        <i class="fa fa-cab"></i> Pro <small>Cab</small>
+                      </h5>
+                      <div class="checkbox checkbox-emboss">
+                        <input type="radio" name="package" value="procab" id="package2" />
+                      </div>
+                      <div class="pkg-price">
+                        <span class="actual">$120 <i>for 15km</i></span>
+                        <label> 3 Passanger</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 no-padding wow bounceIn " data-wow-duration="0.8s" data-wow-delay="1.5s">
+                    <div class="pkg-item">
+                      <h5 class="pkg-title">
+                        <i class="fa fa-cab"></i> Advanced <small>Cab</small>
+                      </h5>
+                      <div class="checkbox checkbox-emboss">
+                        <input type="radio" name="package" value="advancedcab" id="package3" />
+                      </div>
+                      <div class="pkg-price">
+                        <span class="actual">$180 <i>for 20km</i></span>
+                        <label> 4 Passanger</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="buttons">
+                    <input type="submit" name="submit" class="btn btn-default wow bounceIn" value="submit form" data-wow-duration="0.8s" data-wow-delay="1.8s" />
+                    <input type="reset" class="btn btn-dark wow bounceIn" value="Reset" data-wow-duration="0.8s" data-wow-delay="1.8s" />
+                    <input type="button" disabled="disabled" class="btn btn-success wow bounceIn routeInfobtn " value="Get Route Info" data-wow-duration="0.8s" data-wow-delay="1.8s" onclick="GetRoute()" data-toggle="modal" data-target="#routeInfo" />
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="totaldistanced" id="totaldistanced" />
+              <input type="hidden" name="totalduration" id="totalduration" />
+            </form>
+
+
+            <!-- CAB BOOK FORM END -->
+
+
+
+          </div>
+          <div class="Route-intro">
+
+            <div id="dvDistance"></div>
+            <div id="dvMap" class="col-md-6" style="height: 90%"></div>
+            <div id="dvPanel" class="col-md-6" style="height: 90%"></div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BOOK CAB END -->
+    <!-- OUR VEHICEL -->
+    <section class="ourvehicle padding-180" id="vehicle_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="primary-title">our <small> Vehicle</small><i>Autoroom</i></h4>
+          </div>
+          <div class="col-md-6">
+            <!-- NAV TABS -->
+            <ul class="nav nav-tabs pull-right" data-animation="true" data-animation-class="bounceInDown" role="tablist">
+              <li role="presentation" class="active"><a href="#cab" aria-controls="cab" role="tab" data-toggle="tab">Cab</a></li>
+              <li role="presentation"><a href="#taxi" aria-controls="taxi" role="tab" data-toggle="tab">Taxi</a></li>
+              <li role="presentation"><a href="#suv" aria-controls="suv" role="tab" data-toggle="tab">SuV</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <!-- TAB PANES  -->
+          <div class="tab-content">
+            <!-- CAB TABPANEL -->
+            <div role="tabpanel" class="tab-pane active" id="cab">
+              <div class="owl-carousel owl-theme vehicle-slider" id="vehicle-slider">
+                <div class="item">
+                  <!-- ITEM ONE-->
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img class="thumb" src="{% static 'assets/theme/img/vehicle/1.jpg' %}" alt="vehicle" />
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/flip.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C5 <small>start FROM $17 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM ONE ENd -->
+                <!-- ITEM TWO -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/2.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C6 <small>start FROM $27 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/2.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM TWO END -->
+                <!-- ITEM THREE  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb"><img src="{% static 'assets/theme/img/vehicle/3.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C7 <small>start FROM $57 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/3.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM THREE END -->
+                <!-- ITEM FOUR -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/4.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C8 <small>start FROM $90 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM FOUR END -->
+                <!-- ITEM FIVE -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img class="thumb" src="{% static 'assets/theme/img/vehicle/1.jpg' %}" alt="vehicle" />
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/flip.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C5 <small>start FROM $17 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM FIVE END -->
+              </div>
+            </div>
+            <!-- CAB TABPANEL END -->
+            <!-- TAXI TABPANEL -->
+            <div role="tabpanel" class="tab-pane" id="taxi">
+              <div class="owl-carousel owl-theme vehicle-slider" id="vehicle-slider2">
+                <!-- ITEM ONE -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img class="thumb" src="{% static 'assets/theme/img/vehicle/1.jpg' %}" alt="vehicle" />
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/flip.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C5 <small>start FROM $17 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM ONE END -->
+                <!-- ITEM TWO  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/2.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C6 <small>start FROM $27 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/2.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM TWO END -->
+                <!-- ITEM THREE  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb"><img src="{% static 'assets/theme/img/vehicle/3.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C7 <small>start FROM $57 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/3.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM THREE END  -->
+                <!-- ITEM FOUR  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/4.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C8 <small>start FROM $90 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM FOUR END  -->
+              </div>
+            </div>
+            <!-- TAXI TABPANEL END -->
+            <!-- SUV TABPANEL -->
+            <div role="tabpanel" class="tab-pane" id="suv">
+              <!-- TAB SUV -->
+              <div class="owl-carousel owl-theme vehicle-slider" id="vehicle-slider3">
+                <div class="item">
+                  <!-- ITEM ONE-->
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img class="thumb" src="{% static 'assets/theme/img/vehicle/suv01.jpg' %}" alt="vehicle" />
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/flip.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C5 <small>start FROM $17 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM ONE END -->
+                <!-- ITEM TWO -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/suv02.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C6 <small>start FROM $27 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/2.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM TWO END -->
+                <!-- ITEM THREE  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb"><img src="{% static 'assets/theme/img/vehicle/suv03.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C7 <small>start FROM $57 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/3.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">scarlett</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM THREE END  -->
+                <!-- ITEM FOUR  -->
+                <div class="item">
+                  <div class="vehicle-info">
+                    <div class="vh-thumb">
+                      <img src="{% static 'assets/theme/img/vehicle/suv04.jpg' %}" alt="vehicle">
+                      <img class="flip" src="{% static 'assets/theme/img/vehicle/taxi.jpg' %}" alt="vehicle" />
+                      <a href="#" class="btn btn-rounded booknow"><i class="fa fa-search-plus"></i> booknow</a>
+                    </div>
+                    <h4>vehicle C8 <small>start FROM $90 <sup>/DAY</sup></small> </h4>
+                    <span class="md-divider"></span>
+                    <div class="driver-info">
+                      <span class="dri-thumb">
+                        <img src="{% static 'assets/theme/img/drivers/1.jpg' %}" alt="">
+                      </span>
+                      <div class="dri-title">
+                        <a href="#">DAVID BERGMAN</a><br>
+                        <ul class="rating dri-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star"></li>
+                          <li class="fa fa-star"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM FOUR END  -->
+              </div>
+            </div>
+            <!-- SUV TABPANEL END -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- OUR VEHICEL END -->
+    <!-- OUR PACKAGE -->
+    <section class="ourpackages padding-180" id="packages">
+      <div class="container">
+        <div class="row">
+          <h4 class="primary-title yellow">our <small> Package</small><i>autoroom</i></h4>
+        </div>
+        <div class="row">
+          <div class="owl-carousel owl-theme" id="package-box">
+            <!-- ITEM ONE -->
+            <div class="item ">
+              <div class="package-info padding70">
+                <span class="cabicon wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.1s">
+                  <i class="fa fa-cab"></i>
+                </span>
+                <a href="#" class="title-small wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.2s">Prime</a>
+                <h3 class="price-info wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.3s">$200.0 <sup>/24 hours</sup></h3>
+                <ul class="featured padding-50">
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.4s"><i class="fa fa-bullseye"></i> city travel permit</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.5s"><i class="fa fa-bullseye"></i> AC vehicle</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.6s"><i class="fa fa-bullseye"></i> 3 tourism place</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.7s"><i class="fa fa-bullseye"></i>tourist guide</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.8s"><i class="fa fa-bullseye"></i> Quality vehicles</li>
+                </ul>
+                <div class="buttons">
+                  <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.9s"><i class="fa fa-cog"></i> Get now</a>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM ONE END -->
+            <!-- ITEM TWO -->
+            <div class="item ">
+              <div class="package-info padding70">
+                <span class="cabicon wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.1s">
+                  <i class="fa fa-cab"></i>
+                </span>
+                <a href="#" class="title-small wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.2s">superior</a>
+                <h3 class="price-info wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.3s">$600.0 <sup>/7 day</sup></h3>
+                <ul class="featured padding-50">
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.4s"><i class="fa fa-bullseye"></i> city travel permit</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.5s"><i class="fa fa-bullseye"></i> AC vehicle</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.6s"><i class="fa fa-bullseye"></i> 3 tourism place</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.7s"><i class="fa fa-bullseye"></i>tourist guide</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.8s"><i class="fa fa-bullseye"></i> Quality vehicles</li>
+                </ul>
+                <div class="buttons">
+                  <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.9s"><i class="fa fa-cog"></i> Get now</a>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM TWO END -->
+            <!-- ITEM THREE -->
+            <div class="item ">
+              <div class="package-info padding70">
+                <span class="cabicon wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.1s">
+                  <i class="fa fa-cab"></i>
+                </span>
+                <a href="#" class="title-small wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.2s">exclusive</a>
+                <h3 class="price-info wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.3s">$900.0 <sup>/15 day</sup></h3>
+                <ul class="featured padding-50">
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.4s"><i class="fa fa-bullseye"></i> city travel permit</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.5s"><i class="fa fa-bullseye"></i> AC vehicle</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.6s"><i class="fa fa-bullseye"></i> 3 tourism place</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.7s"><i class="fa fa-bullseye"></i>tourist guide</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.8s"><i class="fa fa-bullseye"></i> Quality vehicles</li>
+                </ul>
+                <div class="buttons">
+                  <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.9s"><i class="fa fa-cog"></i> Get now</a>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM THREE END -->
+            <!-- ITEM FOUR  -->
+            <div class="item ">
+              <div class="package-info padding70">
+                <span class="cabicon wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.1s">
+                  <i class="fa fa-cab"></i>
+                </span>
+                <a href="#" class="title-small wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.2s">Advanced</a>
+                <h3 class="price-info wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.3s">$1500.0 <sup>/ 28day</sup></h3>
+                <ul class="featured padding-50">
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.4s"><i class="fa fa-bullseye"></i> city travel permit</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.5s"><i class="fa fa-bullseye"></i> AC vehicle</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.6s"><i class="fa fa-bullseye"></i> 3 tourism place</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.7s"><i class="fa fa-bullseye"></i>tourist guide</li>
+                  <li class="wow bounceIn" data-wow-duration="0.2s" data-wow-delay="0.8s"><i class="fa fa-bullseye"></i> Quality vehicles</li>
+                </ul>
+                <div class="buttons">
+                  <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.9s"><i class="fa fa-cog"></i> Get now</a>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM FOUR END  -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- OUR PACKAGE END -->
+    <!--  DOWNLOAD APP -->
+    <section class="download-app padding-180" id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="download-info">
+              <h4 class="title-big"><small> Tripple A Express</small> app </h4>
+              <span class="big-text"><b>Download </b>app to your</span>
+              <h2>iPHONE, iPAD & ANDROID <small>Now Available On</small></h2>
+              <div class="buttons social-btn padding-40">
+                <a class="btn btn-googleplay wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                  <img src="{% static 'assets/theme/img/google-play.png' %}" width="35" alt="">
+                  <span class="text"><i>Get it now</i>
+                    Google Play</span></a>
+                <a class="btn btn-appstore wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                  <img src="{% static 'assets/theme/img/apple.png' %}" width="35" alt=""> <span class="text"><i>Get it now</i> App Store</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="app-phone">
+              <img class="wow rotateInUpRight" data-wow-duration="0.5s" src="{% static 'assets/theme/img/phone-hand.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DOWNLOAD APP END -->
+    <!-- PASSANGER FEED -->
+    <section class="passanger-feed padding-180" id="feeds">
+      <div class="container">
+        <div class="row">
+          <h4 class="primary-title black">PASSENGER <small> feed</small><i>what say our PASSENGER</i></h4>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s">Add yoUR FEED</a>
+              <a href="#" class="btn btn-default wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.7s">View All</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <div class="owl-carousel owl-theme feeds-slider" id="feeds-slider">
+              <div class="item">
+                <!-- ITEM ONE -->
+                <div class="feed-post">
+                  <div class="col-md-4 col-sm-3">
+                    <div class="user-thumb">
+                      <img src="{% static 'assets/theme/img/post-thumb.jpg' %}" alt="">
+                      <span class="media-icon"><i class="fa fa-youtube-play"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-sm-9">
+                    <div class="post-content">
+                      <a href="#" class="title">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                      <div class="userinfo">
+                        <span class="user-name">lisa Daineal <i>Marketing</i></span>
+                        <ul class="rating user-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ITEM ONE END -->
+              <!-- ITEM TWO -->
+              <div class="item">
+                <div class="feed-post">
+                  <div class="col-md-4 col-sm-3">
+                    <div class="user-thumb">
+                      <img src="{% static 'assets/theme/img/post-thumb.jpg' %}" alt="">
+                      <span class="media-icon"><i class="fa fa-youtube-play"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-sm-9">
+                    <div class="post-content">
+                      <a href="#" class="title">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                      <div class="userinfo">
+                        <span class="user-name">lisa Daineal <i>Marketing</i></span>
+                        <ul class="rating user-rating">
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                          <li class="fa fa-star active"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ITEM TWO END -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PASSANGER FEED END-->
+
+{% endblock content %}
