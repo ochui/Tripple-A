@@ -1,0 +1,37 @@
+{% extends 'account/auth_base.html' %}
+{% load static %}
+{% block content %}
+    <div class="sign">
+        <!-- particles -->
+        <div id="particles-js" class="sign__particles"></div>
+        <!-- end particles -->
+
+        <div class="sign__content">
+            <!-- form -->
+            {% if form.errors %}
+            <div class="note note-lg note-no-icon note-danger">
+                <p>{{ form.errors }}</p>
+            </div>
+            {% endif %}
+            <form action="{% url 'account_login' %}" method="POST" class="sign__form">
+                <a href="{% url 'home' %}"><img class="sign__logo" src="{% static 'assets/theme/img/logo.png' %}" alt=""></a>
+                {% csrf_token %}
+                {{ form.login }}
+
+                {{ form.password }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="btn btn-primary" type="submit">Log In</button>
+
+                <a href="{% url 'account_reset_password' %}" class="sign__forgot">Forgot password?</a>
+            </form>
+            <!-- end form -->
+
+            <div class="sign__box">
+                <p>Don't have an account? <a href="{{ signup_url }}">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

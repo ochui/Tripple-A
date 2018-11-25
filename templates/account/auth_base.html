@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Raleway:100i,300,400,500,700,900|Roboto:300,400,700,900"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{% static 'assets/theme/css/responsive.css' %}">
+    <!-- Distance css -->
+    <link rel="stylesheet" href="{% static 'assets/theme/css/distanced.css' %}">
+    <link rel="stylesheet" id="styler" data-cssRot="assets/colors/" href="{% static 'assets/colors/default.css' %}">
+    <style>
+        /*==============================
+	Form
+==============================*/
+.form__input,
+.form__select {
+  display: block;
+  width: 100%;
+  letter-spacing: 0.4px;
+  height: 56px;
+  border: none;
+  background-color: #ffdf;
+  color: #444;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.form__select-wrap {
+  display: block;
+  position: relative;
+}
+.form__select-wrap:before {
+  content: '\e64b';
+  position: absolute;
+  display: block;
+  font-family: 'themify';
+  top: 25px;
+  right: 20px;
+  color: #fff;
+  pointer-events: none;
+  font-size: 12px;
+  height: 8px;
+  line-height: 8px;
+}
+.form__select {
+  cursor: pointer;
+  color: #fff;
+}
+.form__group {
+  position: relative;
+  margin-top: 30px;
+}
+.form__group input:not(:checked),
+.form__group input:checked {
+  position: absolute;
+  left: -9999px;
+}
+.form__group input:not(:checked) + label,
+.form__group input:checked + label {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+  padding-left: 34px;
+  line-height: 22px;
+  margin: 0;
+}
+.form__group input:not(:checked) + label a,
+.form__group input:checked + label a {
+  color: #707070;
+  text-decoration: underline;
+}
+.form__group input:not(:checked) + label a:hover,
+.form__group input:checked + label a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.form__group input:not(:checked) + label:before,
+.form__group input:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.form__group input:not(:checked) + label:after,
+.form__group input:checked + label:after {
+  font-family: 'themify';
+  content: '\e64c';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+}
+.form__group input:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+}
+.form__group input:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+@media (min-width: 576px) {
+  .form__group {
+    margin-top: 40px;
+  }
+}
+    /*==============================
+	Sign
+==============================*/
+.sign {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+.sign__content {
+  background-color: #ffdd00;
+  -webkit-box-shadow: 0 16px 56px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 16px 56px 0 rgba(0,0,0,0.1);
+  border-bottom: 7px solid #fff;
+  width: 100%;
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+.sign__form {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign__logo {
+  margin-bottom: 30px;
+}
+.sign__forgot {
+  color: #000000;
+  font-size: 16px;
+  margin-top: 30px;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+}
+.sign__forgot:hover {
+  color: #707070;
+  text-decoration: underline;
+}
+.sign__box {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.sign__box p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  color: #000000;
+  letter-spacing: 0.4px;
+}
+.sign__box a {
+  color: #000000;
+  text-decoration: underline;
+}
+.sign__box a:hover {
+  color: #707070;
+  text-decoration: underline;
+}
+.sign__particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 1;
+}
+@media (min-width: 360px) {
+  .sign__content {
+    max-width: 330px;
+  }
+}
+@media (min-width: 576px) {
+  .sign__content {
+    max-width: 400px;
+  }
+  .sign__form {
+    padding: 40px;
+  }
+  .sign__forgot {
+    margin-top: 40px;
+  }
+  .sign__logo {
+    margin-bottom: 40px;
+  }
+}
+.btn {
+  position: relative;
+  display: block;
+  height: 56px;
+  width: 100%;
+  max-width: 180px;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 56px;
+  background-color: #000;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #444;
+}
+button:focus {
+  outline: none;
+}
+    </style>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+
+    <!-- auth form -->
+    {% block content %}
+    {% endblock content %}
+    <!-- end auth form -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'assets/theme/js/particles-app.js' %}"></script>
+</body>
+{% block javascript %}
+{% endblock javascript %}
+</html>

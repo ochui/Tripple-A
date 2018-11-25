@@ -158,6 +158,12 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
+ACCOUNT_FORMS = {
+'signup': 'accounts.forms.CustomSignupForm',
+'login': 'accounts.forms.CustomLoginForm',
+'reset_password': 'accounts.forms.CustomResetPasswordForm',
+}
+
 #Heroku
 django_heroku.settings(locals())
 #Heroku
