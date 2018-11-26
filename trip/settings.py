@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     
     #local app
     'accounts.apps.AccountsConfig',
+    'cab.apps.CabConfig',
 ]
 
 MIDDLEWARE = [
