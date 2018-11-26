@@ -54,6 +54,10 @@ INSTALLED_APPS = [
     #'allauth.socialaccount.providers.twitter',
     #'allauth.socialaccount.providers.facebook',
     #'allauth.socialaccount.providers.google',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'rest_auth.registration',
     
     #local app
     'accounts.apps.AccountsConfig',
@@ -164,6 +168,9 @@ ACCOUNT_FORMS = {
 'reset_password': 'accounts.forms.CustomResetPasswordForm',
 }
 
+REST_AUTH_REGISTER_SERIALIZERS  = {
+    'REGISTER_SERIALIZERS':'accounts.serializers.CustomRegisterSerializer'
+}
 #Heroku
 django_heroku.settings(locals())
 #Heroku
