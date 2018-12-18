@@ -29,12 +29,19 @@ class Driver(models.Model):
 
 class Company(models.Model):
 
+    COMPANY_STATUS = (
+        ('1', 'Approved'),
+        ('2', 'Suspended'),
+        ('0', 'Awaiting Approval')
+    )
+
     class Meta:
         verbose_name = "Company"
         verbose_name_plural = "Companies"
         
     admin = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
+    status = models.CharField(max_length=50, choices=COMPANY_STATUS, default='0')
     description = models.TextField(null=True, blank=True)
     address = models.CharField(max_length=200)
 

@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('pages.urls')),
     path("accounts/", include('allauth.urls')),
+    path('api/v1/', include('cab.urls')),
     path('api/v1/', include('rest_auth.urls')),
     path('api/v1/', include('accounts.urls')),
     path('api/v1/registration/', include('rest_auth.registration.urls'))
