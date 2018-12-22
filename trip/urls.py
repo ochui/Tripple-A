@@ -11,7 +11,6 @@ urlpatterns = [
     path("", include('pages.urls')),
     path("accounts/", include('allauth.urls')),
     path('api/v1/', include('cab.urls')),
-    path('api/v1/', include('rest_auth.urls')),
-    path('api/v1/', include('accounts.urls')),
-    path('api/v1/registration/', include('rest_auth.registration.urls'))
+    path('api/v1/auth', include('djoser.urls')), 
+    path('api/v1/auth', include('djoser.urls.authtoken')),
 ]

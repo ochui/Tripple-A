@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     #3rd party
-    'corsheaders',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -56,8 +55,7 @@ INSTALLED_APPS = [
     #'allauth.socialaccount.providers.google',
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth',
-    'rest_auth.registration',
+    'djoser',
     
     #local app
     'accounts.apps.AccountsConfig',
@@ -163,15 +161,18 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
-ACCOUNT_FORMS = {
-'signup': 'accounts.forms.CustomSignupForm',
-'login': 'accounts.forms.CustomLoginForm',
-'reset_password': 'accounts.forms.CustomResetPasswordForm',
-}
 
 REST_AUTH_REGISTER_SERIALIZERS  = {
     'REGISTER_SERIALIZERS':'accounts.serializers.CustomRegisterSerializer'
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 #Heroku
 django_heroku.settings(locals())
 #Heroku
