@@ -162,8 +162,10 @@ ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 
-REST_AUTH_REGISTER_SERIALIZERS  = {
-    'REGISTER_SERIALIZERS':'accounts.serializers.CustomRegisterSerializer'
+DJOSER = {
+    'SERIALIZERS': {
+         'user_create': 'accounts.serializers.UserRegistrationSerializer'
+    }
 }
 
 REST_FRAMEWORK = {
