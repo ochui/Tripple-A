@@ -175,6 +175,7 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTH_PASSWORD_VALIDATORS = [] #Disable password validation #TODO: remove in production
 #Heroku
 django_heroku.settings(locals())
 #Heroku
