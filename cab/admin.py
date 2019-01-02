@@ -4,7 +4,7 @@
 #  * file that was distributed with this source code.
 
 from django.contrib import admin
-from cab.models import Company, Route, Driver
+from cab.models import Company, Route, Driver, Booking
 
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
@@ -25,3 +25,9 @@ class DriverAdmin(admin.ModelAdmin):
     list_display = ('driver', 'car', 'plate_no', 'status')
     list_filter = ('status', )
 
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+
+    list_display = ('name_with_phone_number', 'billing_status', 'status')
+    list_filter = ('status', 'billing_status')
+    

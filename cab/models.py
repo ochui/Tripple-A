@@ -5,6 +5,7 @@
 
 from django.db import models
 from django.conf import settings
+from django.contrib.postgres.fields import JSONField
 
 
 class Driver(models.Model):
@@ -67,3 +68,33 @@ class Route(models.Model):
             return '{0}:{1} to {2}(Return)'.format(self.company.name, self.pick_up, self.drop_off)
         else:
             return '{0}:{1} to {2}'.format(self.company.name, self.pick_up, self.drop_off)
+
+
+class Booking(models.Model):
+
+    BOOKING_STATUS = (
+        ('1', 'SEARCHING FOR DRIVER'),
+        ('2', 'WAITING FOR PICKUP'),
+        ('3', 'IN PROGRESS'),
+        ('4', 'COMPLETED'),
+    )
+
+    BILLING_STATUS = (
+        ('0', 'UNPAID'),
+        ('1', 'PAID')
+    )
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    address = JSONField()
+    route = models.ForeignKey(Route, on_delete=models.CASCADE, null=True, blank=True)
+    billing_status = models.CharField("Billing status", max_length=2, choices=BILLING_STATUS, default='0')
+    payment_time = models.DateTimeField("Payment time", auto_now=False, auto_now_add=False, null=True, blank=True)
+    status = models.CharField(max_length=2, choices=BOOKING_STATUS, default='1')
+    booking_time = models.DateTimeField("Booking time", auto_now=False, auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    def name_with_phone_number(self):
+        return '{0}({1})'.format(self.user.get_full_name(), self.user.phone_number)
+
+    def __str__(self):
+        return '{0}({1})'.format(self.user.get_full_name(), self.user.phone_number)
