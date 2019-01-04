@@ -3,7 +3,7 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
-from cab.models import Driver, Company, Route
+from cab.models import Driver, Company, Route, Booking
 
 
 class DriverSerializer(ModelSerializer):
@@ -35,4 +35,17 @@ class RouteSerializer(ModelSerializer):
     
     class Meta:
         model = Route
+        fields = '__all__'
+
+class BookingSerializer(ModelSerializer):
+    
+    class Meta:
+        model = Booking
+        fields = ('id', 'address', 'billing_status', 'status')
+
+
+class BookingDetailSerializer(ModelSerializer):
+    
+    class Meta:
+        model = Booking
         fields = '__all__'

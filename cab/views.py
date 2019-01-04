@@ -3,10 +3,10 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 
-from rest_framework.generics import ListCreateAPIView
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from cab.models import Route, Driver, Company
-from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from cab.models import Route, Driver, Company, Booking
+from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer, BookingSerializer, BookingDetailSerializer
 
 
 class RouteList(ListCreateAPIView):
@@ -38,3 +38,24 @@ class DriverList(ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(driver=self.request.user)
+
+
+class BookingList(ListCreateAPIView):
+
+    serializer_class = BookingSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+class BookingDetails(RetrieveUpdateDestroyAPIView):
+    
+    serializer_class = BookingDetailSerializer
+    permission_classes = [IsAuthenticated]
+
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
