@@ -164,6 +164,7 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 
 DJOSER = {
     'SERIALIZERS': {
+        'user': 'accounts.serializers.customUserSerializer',
          'user_create': 'accounts.serializers.UserRegistrationSerializer'
     }
 }

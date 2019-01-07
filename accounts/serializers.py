@@ -3,8 +3,8 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 from rest_framework import serializers
-from djoser.serializers import UserCreateSerializer as BaseUserRegistrationSerializer
-
+from djoser.serializers import UserCreateSerializer as BaseUserRegistrationSerializer, UserSerializer
+from django.contrib.auth import get_user_model
 
 # class CustomRegisterSerializer(RegisterSerializer):
     
@@ -23,6 +23,18 @@ from djoser.serializers import UserCreateSerializer as BaseUserRegistrationSeria
 #         user.city = self.validated_data.get('city')
 #         user.save(update_fields=['phone_number', 'gender', 'date_of_birth', 'state', 'city'])
 
+User = get_user_model()
+
 class UserRegistrationSerializer(BaseUserRegistrationSerializer):
     class Meta(BaseUserRegistrationSerializer.Meta):
         fields = ('username', 'email', 'first_name', 'last_name', 'phone_number', 'password', )
+
+
+class customUserSerializer(UserSerializer):
+    
+    class Meta(UserSerializer.Meta):
+        fields = tuple(User.REQUIRED_FIELDS) + (
+            User._meta.pk.name,
+            User.USERNAME_FIELD,
+            'first_name', 'last_name', 'phone_number',
+        )
