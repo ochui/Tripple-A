@@ -77,6 +77,7 @@ class Booking(models.Model):
         ('2', 'WAITING FOR PICKUP'),
         ('3', 'IN PROGRESS'),
         ('4', 'COMPLETED'),
+        ('5', 'CANCEL')
     )
 
     BILLING_STATUS = (

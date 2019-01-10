@@ -41,7 +41,7 @@ class BookingSerializer(ModelSerializer):
     
     class Meta:
         model = Booking
-        fields = ('id', 'address', 'billing_status', 'status')
+        fields = '__all__'
 
 
 class BookingDetailSerializer(ModelSerializer):
