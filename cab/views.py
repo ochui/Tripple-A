@@ -16,7 +16,7 @@ class RouteList(ListCreateAPIView):
 
     def get_queryset(self):
         
-        return Route.objects.all()
+        return Route.objects.filter(company=self.kwargs['company_id'])
 
 
 

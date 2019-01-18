@@ -5,7 +5,7 @@
 from django.urls import path
 from cab.views import RouteList, CompanyList, DriverList, BookingList, BookingDetails
 urlpatterns = [
-    path('routes', RouteList.as_view(), name='routes'),
+    path('routes/<int:company_id>', RouteList.as_view(), name='routes'),
     path("companies", CompanyList.as_view(), name="companies"),
     path("drivers", DriverList.as_view(), name="drivers"),
     path("booking", BookingList.as_view(), name="booking"),
