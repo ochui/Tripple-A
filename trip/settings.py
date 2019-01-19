@@ -38,6 +38,7 @@ LOGIN_REDIRECT_URL = '/accounts/'
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -93,6 +94,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'trip.wsgi.application'
+ASGI_APPLICATION = 'trip.routing.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
+        },
+    },
+}
 
 
 # Database

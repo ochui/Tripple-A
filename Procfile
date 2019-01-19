@@ -1,1 +1,1 @@
-web: gunicorn trip.wsgi --log-file -
+web: daphne trip.asgi:application --port $PORT --bind 0.0.0.0
