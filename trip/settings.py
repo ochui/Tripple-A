@@ -30,7 +30,7 @@ DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = []
 
-#custom user model
+# custom user model
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = '/accounts/'
@@ -47,18 +47,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    #3rd party
+    # 3rd party
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    #'allauth.socialaccount.providers.twitter',
-    #'allauth.socialaccount.providers.facebook',
-    #'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.google',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
-    
-    #local app
+
+    # local app
     'accounts.apps.AccountsConfig',
     'cab.apps.CabConfig',
 ]
@@ -176,7 +176,7 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 DJOSER = {
     'SERIALIZERS': {
         'user': 'accounts.serializers.customUserSerializer',
-         'user_create': 'accounts.serializers.UserRegistrationSerializer'
+        'user_create': 'accounts.serializers.UserRegistrationSerializer'
     }
 }
 
@@ -187,7 +187,14 @@ REST_FRAMEWORK = {
     )
 }
 
-AUTH_PASSWORD_VALIDATORS = [] #Disable password validation #TODO: remove in production
-#Heroku
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.PhoneNumberBackend',
+    'accounts.backends.EmailBackend'
+]
+
+# Disable password validation #TODO: remove in production
+AUTH_PASSWORD_VALIDATORS = []
+# Heroku
 django_heroku.settings(locals())
-#Heroku
+# Heroku
