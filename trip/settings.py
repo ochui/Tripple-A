@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Configure Django App for Heroku.
-import django_heroku
+#import django_heroku
+from .herokuconfig import settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -196,5 +197,6 @@ AUTHENTICATION_BACKENDS = [
 # Disable password validation #TODO: remove in production
 AUTH_PASSWORD_VALIDATORS = []
 # Heroku
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
+settings(locals())
 # Heroku
