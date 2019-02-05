@@ -3,7 +3,7 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 
-from django.db import models
+from django.contrib.gis.db import models
 from django.conf import settings
 from django.contrib.postgres.fields import JSONField
 
@@ -23,6 +23,8 @@ class Driver(models.Model):
     car = models.CharField(max_length=50)
     plate_no = models.CharField(max_length=15)
     status = models.CharField(max_length=50, choices=DRIVER_STATUS, default='0')
+    location = models.PointField(null=True, blank=True)
+
 
     def __str__(self):
         return self.driver.get_full_name()

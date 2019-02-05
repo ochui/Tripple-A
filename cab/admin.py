@@ -5,6 +5,7 @@
 
 from django.contrib import admin
 from cab.models import Company, Route, Driver, Booking
+from django.contrib.gis.admin import OSMGeoAdmin
 
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
@@ -20,9 +21,9 @@ class RouteAdmin(admin.ModelAdmin):
 
 
 @admin.register(Driver)
-class DriverAdmin(admin.ModelAdmin):
+class DriverAdmin(OSMGeoAdmin):
     
-    list_display = ('driver', 'car', 'plate_no', 'status')
+    list_display = ('driver', 'location', 'car', 'plate_no', 'status')
     list_filter = ('status', )
 
 @admin.register(Booking)
