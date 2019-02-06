@@ -16,6 +16,8 @@ import os
 #import django_heroku
 from .herokuconfig import settings
 
+import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -208,4 +210,10 @@ AUTH_PASSWORD_VALIDATORS = []
 # Heroku
 #django_heroku.settings(locals())
 settings(locals())
+<<<<<<< HEAD
 # Heroku
+=======
+# Heroku
+
+DATABASES['default'] = dj_database_url.config()
+>>>>>>> a9ff04468008366284690318b68829a17aa4c87c
