@@ -16,8 +16,6 @@ import os
 #import django_heroku
 from .herokuconfig import settings
 
-import dj_database_url
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -117,6 +115,10 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+if 'DATABASE_URL' in os.environ:  # please help me heroku gods
+    if 'postgres' in os.environ['DATABASE_URL']:
+        os.environ['DATABASE_URL'] = os.environ['DATABASE_URL'].replace('postgres', 'postgis')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -207,5 +209,3 @@ AUTH_PASSWORD_VALIDATORS = []
 #django_heroku.settings(locals())
 settings(locals())
 # Heroku
-
-DATABASES['default'] = dj_database_url.config()
