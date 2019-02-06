@@ -16,6 +16,8 @@ import os
 #import django_heroku
 from .herokuconfig import settings
 
+import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,6 +37,10 @@ ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = '/accounts/'
+
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
 
 # Application definition
 
@@ -201,3 +207,5 @@ AUTH_PASSWORD_VALIDATORS = []
 #django_heroku.settings(locals())
 settings(locals())
 # Heroku
+
+DATABASES['default'] = dj_database_url.config()
