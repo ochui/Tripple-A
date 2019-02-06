@@ -210,10 +210,4 @@ AUTH_PASSWORD_VALIDATORS = []
 # Heroku
 #django_heroku.settings(locals())
 settings(locals())
-<<<<<<< HEAD
 # Heroku
-=======
-# Heroku
-
-DATABASES['default'] = dj_database_url.config()
->>>>>>> a9ff04468008366284690318b68829a17aa4c87c
