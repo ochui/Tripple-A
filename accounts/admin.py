@@ -13,6 +13,12 @@ class CustomUserAdmin(UserAdmin):
 
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
-    list_display = ['username', 'email', 'phone_number',  'city', 'state' ]
+    fieldsets = UserAdmin.fieldsets + (
+        ('KYC', {'fields': ('phone_number', 'city', 'state')}),
+    )
+    add_fieldsets = UserAdmin.fieldsets + (
+        ('KYC', {'fields': ('phone_number', 'city', 'state')}),
+    )
+    list_display = ['username', 'email', 'phone_number',  'city', 'state']
     list_filter = ['city', 'state', 'is_active', 'is_staff']
     model = CustomUser
