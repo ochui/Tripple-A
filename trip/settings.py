@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.gis',
 
     # 3rd party
     'allauth',
@@ -63,8 +64,9 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.google',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_gis',
     'djoser',
-    'django.contrib.gis',
+    
 
     # local app
     'accounts.apps.AccountsConfig',
@@ -104,11 +106,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'trip.wsgi.application'
 ASGI_APPLICATION = 'trip.routing.application'
 
+REDIS_DEFAULT_HOST = os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379')
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379')],
+            "hosts": [REDIS_DEFAULT_HOST],
         },
     },
 }

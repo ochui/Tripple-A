@@ -2,7 +2,7 @@
 #  * (c) Ochui Princewill Patrick <ochui.princewill@gmail.com>
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
-
+import uuid
 from django.contrib.gis.db import models
 from django.conf import settings
 from django.contrib.postgres.fields import JSONField
@@ -24,6 +24,7 @@ class Driver(models.Model):
     plate_no = models.CharField(max_length=15)
     status = models.CharField(max_length=50, choices=DRIVER_STATUS, default='0')
     location = models.PointField(null=True, blank=True)
+    socket_id = models.UUIDField(default=uuid.uuid4, editable=False)
 
 
     def __str__(self):

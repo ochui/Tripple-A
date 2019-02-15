@@ -3,17 +3,19 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
+from rest_framework_gis.serializers import GeoFeatureModelSerializer
 from cab.models import Driver, Company, Route, Booking
 
 
-class DriverSerializer(ModelSerializer):
+class DriverSerializer(GeoFeatureModelSerializer):
     driver = ReadOnlyField(source='driver.get_full_name')
 
     class Meta:
         model = Driver
+        geo_field = "location"
         fields = (
             'id', 'driver', 'car', 
-            'plate_no', 'status'
+            'plate_no', 'status', 'socket_id',
         )
 
         read_only_fields = (
