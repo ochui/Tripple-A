@@ -119,6 +119,7 @@ class Car(models.Model):
     plate_no = models.CharField(max_length=15)
     start_time = models.TimeField()
     end_time = models.TimeField() #LOL, not anti-christ
+    cost = models.DecimalField(max_digits=15, decimal_places=2)
     image = models.ImageField(upload_to = 'cars/', default = 'cars/no-img.jpg')
     status = models.CharField(max_length=50, choices=DRIVER_STATUS, default='0')
 
