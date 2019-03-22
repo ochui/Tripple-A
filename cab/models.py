@@ -45,6 +45,7 @@ class Company(models.Model):
         
     admin = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to = 'parks/', default = 'cars/no-img.jpg')
     status = models.CharField(max_length=50, choices=COMPANY_STATUS, default='0')
     description = models.TextField(null=True, blank=True)
     address = models.CharField(max_length=200)
