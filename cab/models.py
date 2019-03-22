@@ -102,3 +102,26 @@ class Booking(models.Model):
 
     def __str__(self):
         return '{0}({1})'.format(self.user.get_full_name(), self.user.phone_number)
+
+
+class Car(models.Model):
+    
+    DRIVER_STATUS = (
+        ('1', 'Available'),
+        ('0', 'Unavailable')
+    )
+
+    class Meta:
+        verbose_name = "Car"
+        verbose_name_plural = "Cars"
+
+    model = models.CharField(max_length=50)
+    plate_no = models.CharField(max_length=15)
+    start_time = models.TimeField()
+    end_time = models.TimeField() #LOL, not anti-christ
+    image = models.ImageField(upload_to = 'cars/', default = 'cars/no-img.jpg')
+    status = models.CharField(max_length=50, choices=DRIVER_STATUS, default='0')
+
+
+    def __str__(self):
+        return self.model

@@ -5,8 +5,8 @@
 
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
-from cab.models import Route, Driver, Company, Booking
-from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer, BookingSerializer, BookingDetailSerializer
+from cab.models import Route, Driver, Company, Booking, Car
+from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer, BookingSerializer, BookingDetailSerializer, CarSerializer
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
 from rest_framework_gis.filters import DistanceToPointFilter
@@ -78,3 +78,12 @@ class BookingDetails(RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
+
+
+class CarList(ListAPIView):
+    
+    permission_classes = []
+    serializer_class = CarSerializer
+
+    def get_queryset(self):
+        return Car.objects.all()
