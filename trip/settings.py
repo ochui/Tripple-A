@@ -181,6 +181,10 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+
+DROPBOX_OAUTH2_TOKEN = os.environ.get('DROP_BOX_KEY')
+
 SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
