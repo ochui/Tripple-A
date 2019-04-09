@@ -36,5 +36,5 @@ class customUserSerializer(UserSerializer):
         fields = tuple(User.REQUIRED_FIELDS) + (
             User._meta.pk.name,
             User.USERNAME_FIELD,
-            'first_name', 'last_name', 'phone_number', 'token'
+            'first_name', 'last_name', 'phone_number', 'token', 'bvn'
         )
