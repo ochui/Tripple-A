@@ -213,6 +213,8 @@ AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailBackend'
 ]
 
+SIGNING_BACKEND = 'django_cryptography.core.signing.TimestampSigner'
+
 # Disable password validation #TODO: remove in production
 AUTH_PASSWORD_VALIDATORS = []
 # Heroku

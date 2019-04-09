@@ -8,6 +8,7 @@ from django.db import models
 
 from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
+from django_cryptography.fields import encrypt
 
 class CustomUser(AbstractUser):
 
@@ -23,6 +24,7 @@ class CustomUser(AbstractUser):
     state = models.CharField(_("state"), max_length=50, null=True, blank=True)
     city = models.CharField(_("city"), max_length=50, null=True, blank=True)
     token = models.CharField(_("token"), max_length=255, null=True, blank=True)
+    bvn = encrypt(models.CharField(max_length=50, blank=True, null=True))
 
     def __str__(self):
         return self.get_full_name()

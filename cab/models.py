@@ -127,3 +127,19 @@ class Car(models.Model):
 
     def __str__(self):
         return self.model
+
+
+class CarBooking(models.Model):
+
+    BOOKING_STATUS = (
+        ('1', 'Active'),
+        ('0', 'Expired')
+    )
+    class Meta:
+        verbose_name = "Car Booking"
+        verbose_name_plural = "Car Booking"
+    
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    status  = models.CharField(max_length=2, choices=BOOKING_STATUS, default='1')
+    created = models.DateTimeField(auto_now_add=True)
