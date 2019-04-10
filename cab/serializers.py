@@ -4,7 +4,7 @@
 #  * file that was distributed with this source code.
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
-from cab.models import Driver, Company, Route, Booking, Car
+from cab.models import Driver, Company, Route, Booking, Car, CarBooking
 
 
 class DriverSerializer(GeoFeatureModelSerializer):
@@ -58,3 +58,13 @@ class CarSerializer(ModelSerializer):
     class Meta:
         model = Car
         fields = '__all__'
+
+
+class CarBookingSerializer(ModelSerializer):
+    
+    class Meta:
+        model = CarBooking
+        fields = '__all__'
+        read_only_fields = (
+            'status', 'user'
+        )

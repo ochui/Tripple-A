@@ -4,7 +4,7 @@
 #  * file that was distributed with this source code.
 
 from django.contrib import admin
-from cab.models import Company, Route, Driver, Booking, Car
+from cab.models import Company, Route, Driver, Booking, Car, CarBooking
 from django.contrib.gis.admin import OSMGeoAdmin
 
 
@@ -40,3 +40,9 @@ class CarAdmin(admin.ModelAdmin):
 
     list_display = ('model', 'plate_no', 'status')
     list_filter = ('status',)
+
+@admin.register(CarBooking)
+class CarBookingAdmin(admin.ModelAdmin):
+    
+    list_display = ('user', 'car', 'status')
+    list_filter = ('car', 'status', 'created')

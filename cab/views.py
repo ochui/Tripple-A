@@ -3,10 +3,10 @@
 #  * For the full copyright and license information, please view the "LICENSE.md"
 #  * file that was distributed with this source code.
 
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView 
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
-from cab.models import Route, Driver, Company, Booking, Car
-from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer, BookingSerializer, BookingDetailSerializer, CarSerializer
+from cab.models import Route, Driver, Company, Booking, Car, CarBooking
+from cab.serializers import RouteSerializer, CompanySerializer, DriverSerializer, BookingSerializer, BookingDetailSerializer, CarSerializer, CarBookingSerializer
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
 from rest_framework_gis.filters import DistanceToPointFilter
@@ -87,3 +87,15 @@ class CarList(ListAPIView):
 
     def get_queryset(self):
         return Car.objects.all()
+
+
+class CarBookingCRUD(ListCreateAPIView):
+    
+    serializer_class = CarBookingSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return CarBooking.objects.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user, status='0')
