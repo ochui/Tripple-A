@@ -16,7 +16,7 @@ class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
         ('KYC', {'fields': ('phone_number', 'city', 'state')}),
     )
-    add_fieldsets = UserAdmin.fieldsets + (
+    add_fieldsets = UserAdmin.add_fieldsets + (
         ('KYC', {'fields': ('phone_number', 'city', 'state')}),
     )
     list_display = ['username', 'email', 'phone_number',  'city', 'state']
