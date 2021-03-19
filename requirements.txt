@@ -30,7 +30,7 @@ django-rest-auth==0.9.3
 django-sendsms==0.2.3
 django-storages==1.7.1
 django-templated-mail==1.1.1
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 djangorestframework-gis==0.14
 djoser==1.3.2
 dropbox==9.3.0
